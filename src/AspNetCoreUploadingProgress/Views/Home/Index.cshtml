@@ -1,5 +1,6 @@
 ﻿@* Copyright © 2017 Dmitry Sikorsky. All rights reserved. *@
 @* Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information. *@
+@model long
 @{ 
   this.ViewBag.Title = "Let’s Upload Something!";
 }
@@ -8,7 +9,7 @@
   <div class="buttons">
     <div class="upload-button">
       <div class="label">Click me!</div>
-      <input id="files" name="files" type="file" size="1" multiple onchange="uploadFiles('files');" />
+      <input id="files" name="files" type="file" size="1" multiple onchange="uploadFiles('files');" data-maxupload="@Model" />
     </div>
   </div>
 </form>

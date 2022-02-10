@@ -3,15 +3,17 @@
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace AspNetCoreFileUploading {
     public class Startup {
-        // This is not the best idea to use a static variable (especially when you have more than one active uploading session at the same time)
-        public static int Progress { get; set; }
+
+        public static ProgressTrackers ProgressTrackers { get; set; }
 
         public void ConfigureServices(IServiceCollection services) {
+            services.AddControllersWithViews();
             services.AddMvc();
         }
 

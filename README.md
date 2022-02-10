@@ -9,4 +9,4 @@ The demo web application screenshot:
 ![Demo web application](result.png)
 *Demo web application*
 
-Updated to use .NET Core 2.0.
+Updated to use .NET Core 6.0.
